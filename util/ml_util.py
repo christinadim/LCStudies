@@ -70,7 +70,7 @@ def createTrainingDatasets(categories, data, cells):
 
 def reshapeSeparateCNN(cells):
     reshaped = {
-        layer: cells[layer].reshape(cells[layer].shape[0], 1, cell_meta[layer]['len_eta'], cell_meta[layer]['len_phi'])
+        layer: cells[layer].reshape(cells[layer].shape[0], cell_meta[layer]['len_eta'], cell_meta[layer]['len_phi'], 1)
         for layer in cell_meta
     }
 
